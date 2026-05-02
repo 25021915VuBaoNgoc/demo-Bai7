@@ -6,7 +6,7 @@ public class HelloTest {
 
   @Test
   public void testSayHello() {
-    new Hello().sayHello();
+    new Hello().SayHello();
   }
 }
  
