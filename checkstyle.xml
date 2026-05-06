@@ -4,19 +4,14 @@
   "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
+  <module name="RegexpSingleline">
+    <property name="format" value="System\.out\.println"/>
+    <property name="message" value="Avoid System.out.println - Use a Logger instead."/>
+  </module>
+
   <module name="TreeWalker">
-
     <module name="LeftCurly"/>
-
     <module name="WhitespaceAround"/>
-
     <module name="MethodName"/>
-
-    <!-- ✅ Sửa Regexp → RegexpSingleline -->
-    <module name="RegexpSingleline">
-      <property name="format" value="System\.out\.println"/>
-      <property name="message" value="Avoid System.out.println"/>
-    </module>
-
   </module>
 </module>

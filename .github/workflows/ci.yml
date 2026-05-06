@@ -27,7 +27,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
+          # ✅ Vì file nằm ngang hàng pom.xml nên để tên file trực tiếp
           checkstyle_config: checkstyle.xml
+          level: warning
           fail_on_error: true
 
       - name: Run tests
