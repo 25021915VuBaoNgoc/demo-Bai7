@@ -28,8 +28,8 @@ jobs:
         run: mvn test --no-transfer-progress
 
       - name: Run Checkstyle
-        run: mvn checkstyle:checkstyle --no-transfer-progress
-        continue-on-error: true
+        run: mvn checkstyle:check --no-transfer-progress
+
 
       - name: Post inline comments on PR
         uses: dbelyaev/action-checkstyle@v1.5.2
