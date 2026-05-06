@@ -1,11 +1,26 @@
 package com.auction;
 
-// Cố ý vi phạm để test PR review:
-// 1. Thiếu Javadoc
-// 2. Tên method viết hoa (BadMethod thay vì badMethod)
 public class BadCode {
 
-  public void BadMethod() {
-    System.out.println("This violates checkstyle!");
+  private int balance;
+
+  public BadCode(int initialBalance) {
+    this.balance = initialBalance;
+  }
+
+  public int deposit(int amount){
+    System.out.println("amount: " + amount);
+    int x=100;
+    balance = balance + amount;
+    return balance;
+  }
+
+  public int withdraw(int amount) {
+    balance = balance - amount;
+    return balance;
+  }
+
+  public int getBalance() {
+    return balance;
   }
 }

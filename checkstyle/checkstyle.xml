@@ -2,13 +2,25 @@
 <!DOCTYPE module PUBLIC
   "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
   "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
 <module name="Checker">
-  <property name="severity" value="warning"/>
   <module name="TreeWalker">
-    <module name="TypeName"/>
+
+    <!-- Dấu { phải cùng dòng với method -->
+    <module name="LeftCurly"/>
+
+    <!-- Phải có space trước { -->
+    <module name="WhitespaceAround"/>
+
+    <!-- Tên method phải viết thường chữ đầu -->
     <module name="MethodName"/>
-    <module name="MissingJavadocMethod">
-      <property name="scope" value="public"/>
+
+    <!-- Không dùng System.out.println -->
+    <module name="Regexp">
+      <property name="format" value="System\.out\.println"/>
+      <property name="illegalPattern" value="true"/>
+      <property name="message" value="Dùng Logger thay vì System.out.println"/>
     </module>
+
   </module>
 </module>
