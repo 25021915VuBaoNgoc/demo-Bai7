@@ -1,4 +1,5 @@
-import com.auction.BadCode;
+package com.auction;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;

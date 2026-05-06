@@ -6,20 +6,16 @@
 <module name="Checker">
   <module name="TreeWalker">
 
-    <!-- Dấu { phải cùng dòng với method -->
     <module name="LeftCurly"/>
 
-    <!-- Phải có space trước { -->
     <module name="WhitespaceAround"/>
 
-    <!-- Tên method phải viết thường chữ đầu -->
     <module name="MethodName"/>
 
-    <!-- Không dùng System.out.println -->
-    <module name="Regexp">
+    <!-- ✅ Sửa Regexp → RegexpSingleline -->
+    <module name="RegexpSingleline">
       <property name="format" value="System\.out\.println"/>
-      <property name="illegalPattern" value="true"/>
-      <property name="message" value="Dùng Logger thay vì System.out.println"/>
+      <property name="message" value="Avoid System.out.println"/>
     </module>
 
   </module>
